@@ -1,4 +1,4 @@
-@extends('layouts.base', ['title' => 'Confirm Password'])
+@extends('shared.base', ['title' => 'Confirm Password'])
 
 @section('content')
 

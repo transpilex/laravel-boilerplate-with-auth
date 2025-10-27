@@ -1,4 +1,4 @@
-@extends('layouts.base', ['title' => 'Verify Email'])
+@extends('shared.base', ['title' => 'Verify Email'])
 
 @section('css')
 @endsection

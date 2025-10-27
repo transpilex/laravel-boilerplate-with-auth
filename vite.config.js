@@ -6,6 +6,6 @@ export default defineConfig({
         laravel({
             input: [],
             refresh: true,
-        }),
+        })
     ],
 });

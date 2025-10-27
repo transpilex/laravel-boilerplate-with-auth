@@ -1,25 +1,15 @@
-@extends('layouts.base', ['title' => 'Create New Account'])
+@extends('shared.base', ['title' => 'Reset Password'])
 
 @section('content')
 
-    <form method="POST" action="{{ route('register') }}">
+    <form method="POST" action="{{ route('password.store') }}">
         @csrf
-        <div>
-            <label>Name</label>
-            <input type="text" name="name" placeholder="Damian D." required>
 
-            @if ($errors->get('name'))
-                <ul class="list-unstyled ps-0 mt-1">
-                    @foreach ((array) $errors->get('name') as $message)
-                        <li class="text-danger mb-1">{{ $message }}</li>
-                    @endforeach
-                </ul>
-            @endif
-        </div>
+        <input type="hidden" name="token" value="{{ $request->route('token') }}">
 
         <div>
             <label>Email address</label>
-            <input type="email" name="email" placeholder="you@example.com" required>
+            <input type="email" name="email" placeholder="you@example.com" disabled>
 
             @if ($errors->get('email'))
                 <ul class="list-unstyled ps-0 mt-1">
@@ -44,7 +34,7 @@
         </div>
 
         <div>
-            <label>Confirm Password</label>
+            <label>Confirm New Password</label>
             <input type="password" name="password_confirmation" placeholder="••••••••" required>
 
             @if ($errors->get('password_confirmation'))
@@ -57,7 +47,7 @@
         </div>
 
         <div>
-            <button type="submit">Create Account</button>
+            <button type="submit">Update Password</button>
         </div>
     </form>
 
