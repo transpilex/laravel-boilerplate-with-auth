@@ -4,6 +4,8 @@
 <head>
     @include('shared.partials/title-meta')
 
+    @yield('styles')
+
     @include('shared.partials/head-css')
 </head>
 
@@ -32,6 +34,8 @@
 </div>
 
 @include('shared.partials/footer-scripts')
+
+@yield('scripts')
 
 </body>
 

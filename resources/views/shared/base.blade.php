@@ -7,6 +7,8 @@
     <title>{{ $title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    @yield('styles')
+
     @include('shared.partials/head-css')
 
 </head>
@@ -16,6 +18,8 @@
 @yield('content')
 
 @include('shared.partials/footer-scripts')
+
+@yield('scripts')
 
 </body>
 
